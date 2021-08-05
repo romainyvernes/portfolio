@@ -1,0 +1,8 @@
+.home main {
+  position: relative;
+  background: purple;
+}
+
+.home .particle-bg {
+  position: fixed;
+}

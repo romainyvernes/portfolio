@@ -46,3 +46,68 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/*
+	=========
+	Navigation lists
+	=========
+*/
+
+/* display nagivation list elements horizontally by default */
+ul {
+	display: flex;
+}
+
+/*
+	=========
+	Forms
+	=========
+*/
+
+/* display elements within forms vertically by default */
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+/*
+	=========
+	Fonts
+	=========
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;900&family=Raleway:wght@300;400;600&display=swap');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+/*
+	=========
+	Inputs and buttons
+	=========
+*/
+
+input, button {
+	font-family: inherit;
+}
+
+/*
+	=========
+	Backgrounds
+	=========
+*/
+
+/* animated background */
+.particles-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+	overflow: hidden;
+	z-index: 0;
+}

@@ -1,0 +1,15 @@
+.greeting {
+  position: relative;
+  background: rgb(175, 11, 11);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting .message {
+  z-index: 1;
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 1.4;
+}
