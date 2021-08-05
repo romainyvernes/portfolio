@@ -8,7 +8,6 @@
 }
 
 .greeting .message {
-  z-index: 1;
   font-size: 3.5em;
   font-weight: 600;
   line-height: 1.4;

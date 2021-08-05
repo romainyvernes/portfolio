@@ -14,22 +14,24 @@ const App = () => {
     <div className="home">
       <Greeting />
       <main>
-        <div className="particles-bg">
+        <div className="particles-bg background">
           <Particles params={snowballsConfig} />
         </div>
-        <header>
-          <Navbar />
-        </header>
-        <About />
-        <section className="projects">
-          <h2>Projects</h2>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-        </section>
-        <Contact />
-        <Footer />
+        <div className="content">
+          <header>
+            <Navbar />
+          </header>
+          <About />
+          <section className="projects">
+            <h2>Projects</h2>
+            <Project />
+            <Project />
+            <Project />
+            <Project />
+          </section>
+          <Contact />
+          <Footer />
+        </div>
       </main>
     </div>
   );

@@ -1,0 +1,11 @@
+.navbar {
+  background: #000;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 2em;
+  color: #fff;
+}
+
+.navbar ul {
+  gap: 2em;
+}

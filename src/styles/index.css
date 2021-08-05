@@ -48,6 +48,7 @@ table {
 }
 *, *::before, *::after {
 	box-sizing: border-box;
+	z-index: 10;
 }
 
 /*
@@ -101,6 +102,16 @@ input, button {
 	=========
 */
 
+/* ensure background is always placed below all other elements */
+.background {
+	z-index: -100;
+}
+
+/* ensure content is always placed on top of background */
+.content {
+	z-index: 100;
+}
+
 /* animated background */
 .particles-bg {
   position: absolute;
@@ -109,5 +120,26 @@ input, button {
   right: 0;
   left: 0;
 	overflow: hidden;
-	z-index: 0;
+}
+
+/*
+	=========
+	Links
+	=========
+*/
+
+/* by default, remove underline and blue text color from links */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*
+	=========
+	Headings
+	=========
+*/
+
+h1, h2 {
+	text-align: center;
 }

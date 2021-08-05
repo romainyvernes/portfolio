@@ -2,12 +2,14 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <footer className="footer">
       <ul>
-        <li></li>
+        <li>
+          <a href="https://github.com/romainyvernes"></a>
+        </li>
       </ul>
-      <p></p>
-    </section>
+      <p>Romain Yvernes &copy;2021</p>
+    </footer>
   );
 };
 
