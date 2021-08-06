@@ -5,7 +5,7 @@ import '../styles/Greeting.css';
 
 const Greeting = () => {
   return (
-    <section className="greeting">
+    <section className="greeting flex-center">
       <div className="particles-bg background">
         <Particles params={polygonsConfig} />
       </div>

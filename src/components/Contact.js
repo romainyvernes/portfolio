@@ -3,10 +3,13 @@ import '../styles/Contact.css';
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <div className="contact">
       <header>
-        <h2>Contact</h2>
-        <p></p>
+        <h2 className="headings-font">Contact</h2>
+        <p>
+          Have a question or want to work together? Leave your contact
+          information below and I'll get back to you as soon as I can.
+        </p>
       </header>
       <form>
         <input type="text" placeholder="Name"></input>
@@ -14,7 +17,7 @@ const Contact = () => {
         <input type="text" placeholder="Message"></input>
         <button type="submit">Submit</button>
       </form>
-    </section>
+    </div>
   );
 };
 

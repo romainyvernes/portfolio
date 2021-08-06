@@ -1,8 +1,33 @@
+/* keeps header at the top of the page when scrolling */
+.primary-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
 .home main {
   position: relative;
   background: purple;
 }
 
-.home .particle-bg {
+.home .particles-bg {
   position: fixed;
+}
+
+.home #tsparticles {
+  height: 100%;
+}
+
+.home main h2 {
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.home .content {
+  flex-direction: column;
+}
+
+.home p {
+  font-size: 1.2em;
 }

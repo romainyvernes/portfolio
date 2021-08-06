@@ -80,10 +80,14 @@ form {
 	=========
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700;900&family=Raleway:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Raleway:wght@300;400;500;600&display=swap');
 
 body {
 	font-family: 'Raleway', sans-serif;
+}
+
+.headings-font {
+	font-family: 'Work Sans', sans-serif;
 }
 
 /*
@@ -142,4 +146,33 @@ a {
 
 h1, h2 {
 	text-align: center;
+}
+
+/*
+	=========
+	Flex layout
+	=========
+*/
+
+/* template for centered content in flexbox */
+.flex-center {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+	=========
+	Container layout
+	=========
+*/
+
+/* create narrower width */
+.narrow {
+	width: 40%;
+}
+
+/* create spacing above and below */
+.space-out {
+	margin: 1.5em 0;
 }
