@@ -80,14 +80,18 @@ form {
 	=========
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Raleway:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@700&family=Georama:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap');
 
 body {
 	font-family: 'Raleway', sans-serif;
 }
 
 .headings-font {
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Corben', cursive;
+}
+
+.subheadings-font {
+	font-family: 'Georama', sans-serif;
 }
 
 /*
@@ -174,5 +178,15 @@ h1, h2 {
 
 /* create spacing above and below */
 .space-out {
-	margin: 1.5em 0;
+	margin: 3em 0;
+}
+
+/*
+	=========
+	Text
+	=========
+*/
+
+p {
+	line-height: 1.4;
 }

@@ -30,7 +30,9 @@ import htmlLogo from '../assets/logos/html5_logo.svg';
 const App = () => {
   return (
     <div className="home">
-      <Greeting />
+      <section className="home-greeting">
+        <Greeting />
+      </section>
       <header className="primary-header">
         <Navbar />
       </header>
@@ -67,10 +69,24 @@ const App = () => {
           </section>
           <section id="projects" className="projects space-out">
             <h2 className="headings-font">Projects</h2>
-            <Project />
-            <Project />
-            <Project />
-            <Project />
+            <Project name="Battleship" 
+                     description="Play the gameboard classic against the computer."
+                     sourceCode="https://github.com/romainyvernes/battleship" 
+                     liveApp="https://romainyvernes.github.io/battleship/" />
+            <Project name="Shopping Cart" 
+                     description="Browse through the catalog of an online blu-ray store and buy your favorite movies and TV shows."
+                     sourceCode="https://github.com/romainyvernes/shopping_cart" 
+                     liveApp="https://romainyvernes.github.io/shopping_cart/"
+                     detailsPlacement="left" />
+            <Project name="Todo List" 
+                     description="Keep track of your busy schedule in one place, from any device."
+                     sourceCode="https://github.com/romainyvernes/todo_list" 
+                     liveApp="https://romainyvernes.github.io/todo_list/" />
+            <Project name="Library" 
+                     description="Keep a log of your favorite books in one place and mark them as read to keep track of your past reads."
+                     sourceCode="https://github.com/romainyvernes/library" 
+                     liveApp="https://romainyvernes.github.io/library/"
+                     detailsPlacement="left" />
           </section>
           <section id="contact" className="narrow space-out">
             <Contact />

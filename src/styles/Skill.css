@@ -1,3 +1,7 @@
+.skill {
+  flex-direction: column;
+}
+
 .skill img {
   height: 60px;
 }

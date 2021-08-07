@@ -1,3 +1,9 @@
+.home-greeting {
+  /* allows to use z-index */
+  position: relative;
+  z-index: 200;
+}
+
 /* keeps header at the top of the page when scrolling */
 .primary-header {
   position: sticky;
@@ -7,19 +13,21 @@
 
 .home main {
   position: relative;
-  background: purple;
-}
-
-.home .particles-bg {
-  position: fixed;
+  background: rgb(13, 38, 66);
+  color: white;
+  padding: 3em 0;
 }
 
 .home #tsparticles {
   height: 100%;
 }
 
+.home main .background {
+  position: fixed;
+}
+
 .home main h2 {
-  font-size: 3.5em;
+  font-size: 2.8em;
   font-weight: 700;
   margin-bottom: 1em;
 }
@@ -30,4 +38,13 @@
 
 .home p {
   font-size: 1.2em;
+}
+
+/* ensure projects section occupies 100% of container width */
+.projects {
+  align-self: stretch;
+}
+
+.projects .project:last-child {
+  margin-bottom: 0;
 }
