@@ -27,4 +27,5 @@
 .project .link {
   letter-spacing: 2px;
   margin: 0.2em 0;
+  border-bottom: 1px solid red;
 }
