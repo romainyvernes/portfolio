@@ -1,6 +1,8 @@
-.home-greeting {
+.home-greeting,
+.primary-footer {
   /* allows to use z-index */
   position: relative;
+  /* place greeting section on top of snowball background */
   z-index: 200;
 }
 
@@ -39,6 +41,42 @@
 .home p {
   font-size: 1.2em;
 }
+
+.home .skills li:first-child {
+  grid-area: skill1;
+}
+
+.home .skills li:nth-child(2) {
+  grid-area: skill2;
+}
+
+.home .skills li:nth-child(3) {
+  grid-area: skill3;
+}
+
+.home .skills li:nth-child(4) {
+  grid-area: skill4;
+}
+
+.home .skills li:nth-child(5) {
+  grid-area: skill5;
+}
+
+.home .skills li:nth-child(6) {
+  grid-area: skill6;
+}
+
+.home .skills ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  grid-template-areas: 
+    ". . skill1 skill1 . ."
+    "skill2 skill2 skill3 skill3 skill4 skill4"
+    ". skill5 skill5 skill6 skill6 .";
+}
+
 
 /* ensure projects section occupies 100% of container width */
 .projects {

@@ -25,7 +25,29 @@
 }
 
 .project .link {
+  margin: 1em 0;
   letter-spacing: 2px;
-  margin: 0.2em 0;
-  border-bottom: 1px solid red;
+}
+
+.project .link a {
+  padding: 0.3em;
+  position: relative;
+}
+
+.project .link a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: scaleY(0.1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  background: red;
+}
+
+.project .link a:hover::after {
+  transform: scaleY(1);
 }

@@ -4,7 +4,7 @@ import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer flex-center">
+    <div className="footer flex-center">
       <ul>
         <li>
           <a href="https://github.com/romainyvernes" 
@@ -27,7 +27,7 @@ const Footer = () => {
         </li>
       </ul>
       <p>Romain Yvernes &copy; 2021</p>
-    </footer>
+    </div>
   );
 };
 

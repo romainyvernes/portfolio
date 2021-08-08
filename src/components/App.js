@@ -30,7 +30,7 @@ import htmlLogo from '../assets/logos/html5_logo.svg';
 const App = () => {
   return (
     <div className="home">
-      <section className="home-greeting">
+      <section className="home-greeting" id="home">
         <Greeting />
       </section>
       <header className="primary-header">
@@ -44,10 +44,10 @@ const App = () => {
           <section id="about" className="narrow space-out">
             <About />
           </section>
-          <section id="skills" className="space-out">
+          <section id="skills" className="skills space-out">
             <h2 className="headings-font">Skills</h2>
             <ul>
-            <li>
+              <li>
                 <Skill image={javascriptLogo} name="JAVASCRIPT" />
               </li>
               <li>
@@ -93,7 +93,9 @@ const App = () => {
           </section>
         </div>
       </main>
-      <Footer />
+      <footer className="primary-footer">
+        <Footer />
+      </footer>
     </div>
   );
 };
