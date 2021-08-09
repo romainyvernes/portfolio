@@ -11,6 +11,7 @@
   position: sticky;
   top: 0;
   z-index: 200;
+  box-shadow: 0 7px 20px 2px rgba(0, 0, 0, 0.5);
 }
 
 .home main {
@@ -20,10 +21,17 @@
   padding: 3em 0;
 }
 
+/* ensures top of sections appears when accessed through header anchor links */
+.home section {
+  scroll-margin-top: 7em;
+}
+
+/* applies to animated backgrounds */
 .home #tsparticles {
   height: 100%;
 }
 
+/* applies to snowball animtated background */
 .home main .background {
   position: fixed;
 }
@@ -42,6 +50,7 @@
   font-size: 1.2em;
 }
 
+/* set name for each skill in skills section */
 .home .skills li:first-child {
   grid-area: skill1;
 }
@@ -65,6 +74,7 @@
 .home .skills li:nth-child(6) {
   grid-area: skill6;
 }
+/* */
 
 .home .skills ul {
   display: grid;

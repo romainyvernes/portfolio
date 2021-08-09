@@ -5,7 +5,7 @@ import '../styles/Footer.css';
 const Footer = () => {
   return (
     <div className="footer flex-center">
-      <ul>
+      <ul className="social">
         <li>
           <a href="https://github.com/romainyvernes" 
              target='_blank' 
@@ -26,7 +26,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p>Romain Yvernes &copy; 2021</p>
+      <p className="copyright">Romain Yvernes &copy; 2021</p>
     </div>
   );
 };

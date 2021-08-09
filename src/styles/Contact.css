@@ -1,0 +1,30 @@
+.contact header {
+  margin-bottom: 2em;
+}
+
+.contact input,
+.contact textarea {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+.contact textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact button[type="submit"] {
+  width: fit-content;
+  margin: 1em 0 0 auto;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 0.5em 1em;
+  border: 1px solid #fff;
+}
+
+.contact button[type="submit"]:hover {
+  background: #fff;
+  color: #000;
+}

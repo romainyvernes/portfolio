@@ -10,3 +10,7 @@
   font-weight: 600;
   line-height: 1.4;
 }
+
+.greeting .message span {
+  color: #fff;
+}

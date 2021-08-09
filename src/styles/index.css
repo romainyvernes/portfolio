@@ -100,8 +100,19 @@ body {
 	=========
 */
 
-input, button {
+input, button, textarea {
 	font-family: inherit;
+	outline: none;
+}
+
+button {
+	border: none;
+	background: transparent;
+	color: inherit;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 /*

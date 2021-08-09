@@ -2,4 +2,23 @@
   flex-direction: column;
   color: #fff;
   background: #000;
+  padding: 0.5em;
+}
+
+.footer .social {
+  font-size: 1.2em;
+}
+
+.footer .social li {
+  margin: 0 1em;
+  transition: transform 0.25s;
+}
+
+.footer .social li:hover {
+  transform: scale(1.2);
+}
+
+.footer .copyright {
+  font-size: 0.8em;
+  margin-top: 0.5em;
 }
