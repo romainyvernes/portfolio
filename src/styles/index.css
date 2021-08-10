@@ -206,3 +206,41 @@ h1, h2 {
 p {
 	line-height: 1.4;
 }
+
+/*
+	=========
+	Animations
+	=========
+*/
+
+.left-slide-in {
+	animation: left-slide-in 1.2s ease-in-out;
+}
+
+@keyframes left-slide-in {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.right-slide-in {
+	animation: right-slide-in 1.2s ease-in-out;
+}
+
+@keyframes right-slide-in {
+  from {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

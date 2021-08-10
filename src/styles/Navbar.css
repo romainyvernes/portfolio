@@ -10,7 +10,9 @@
   margin: 0 1em;
 }
 
+/* class to highlight links */
 .active {
-  transition: color 0.2s;
-  color: red
+  transition: all 0.2s;
+  color: red;
+  font-weight: 600;
 }

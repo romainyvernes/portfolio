@@ -1,6 +1,6 @@
 .greeting {
   position: relative;
-  background: rgb(175, 11, 11);
+  background: rgb(121, 7, 7);
   height: 100vh;
   flex-direction: column;
 }

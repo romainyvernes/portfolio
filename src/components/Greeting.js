@@ -1,5 +1,7 @@
 import React from 'react';
+/* component for animated background */
 import Particles from 'react-particles-js';
+/* configuration options for animated background */
 import polygonsConfig from '../config/polygonsConfig';
 import '../styles/Greeting.css';
 
@@ -11,8 +13,8 @@ const Greeting = () => {
       </div>
       <div className="content">
         <div className="message">
-          <h1>Hello, I'm <span>Romain Yvernes</span>.</h1>
-          <h2>I'm a front-end developer.</h2>
+          <h1 className="left-slide-in">Hello, I'm <span>Romain Yvernes</span>.</h1>
+          <h2 className="right-slide-in">I'm a front-end developer.</h2>
         </div>
       </div>
     </section>

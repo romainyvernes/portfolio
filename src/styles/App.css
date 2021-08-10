@@ -22,8 +22,13 @@
 }
 
 /* ensures top of sections appears when accessed through header anchor links */
-.home section {
-  scroll-margin-top: 7em;
+.home main section {
+  scroll-margin-top: 4.5em;
+}
+
+/* used to hide sections by default */
+.hidden {
+  opacity: 0;
 }
 
 /* applies to animated backgrounds */

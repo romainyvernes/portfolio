@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 /* stylesheet */
 import '../styles/App.css';
 /***********/
@@ -38,11 +38,14 @@ const App = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const id = entry.target.id;
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) { // section is visible
+          // add class "active" to highlight corresponding header link of 
+          // visible section
           document.querySelector(`.primary-header li a[href="#${id}"]`)
                   .parentElement
                   .classList
                   .add('active');
+          handleSlideInOnScroll(entry.target);
         } else {
           document.querySelector(`.primary-header li a[href="#${id}"]`)
                   .parentElement
@@ -51,13 +54,42 @@ const App = () => {
         }
       });
     }, config);
-    
+    // apply observer to every section with an id
     document.querySelectorAll('section[id]').forEach((section) => {
       observer.observe(section);
     });
-
+    // remove observer when component dismounts
     return () => observer.disconnect();
   }, []);
+
+  const handleSlideInOnScroll = (element) => {
+    // terminate function if slide-in effect was already added once
+    if (
+      element.classList.contains("left-slide-in")
+      || element.classList.contains("right-slide-in")
+    ) {
+      return;
+    }
+
+    // get all sections with ids from the document
+    const sections = document.querySelectorAll('main section[id]');
+    
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].id === element.id) { // look for matching element
+        if (i % 2 === 0) { 
+          // every other section starting with the first is slid in from the 
+          // left
+          element.classList.add("left-slide-in");
+          element.classList.remove("hidden");
+        } else {
+          // every other section starting with the second is slid in from the 
+          // right
+          element.classList.add("right-slide-in");
+          element.classList.remove("hidden");
+        }
+      }
+    }
+  };
   
   return (
     <div className="home">
@@ -72,10 +104,10 @@ const App = () => {
           <Particles params={snowballsConfig} />
         </div>
         <div className="content flex-center">
-          <section id="about" className="narrow space-out">
+          <section id="about" className="narrow space-out hidden">
             <About />
           </section>
-          <section id="skills" className="skills space-out">
+          <section id="skills" className="skills space-out hidden">
             <h2 className="headings-font">Skills</h2>
             <ul>
               <li>
@@ -98,7 +130,7 @@ const App = () => {
               </li>
             </ul>
           </section>
-          <section id="projects" className="projects space-out">
+          <section id="projects" className="projects space-out hidden">
             <h2 className="headings-font">Projects</h2>
             <Project name="Battleship" 
                      description="Play the gameboard classic against the computer."
@@ -119,7 +151,7 @@ const App = () => {
                      liveApp="https://romainyvernes.github.io/library/"
                      detailsPlacement="left" />
           </section>
-          <section id="contact" className="narrow space-out">
+          <section id="contact" className="narrow space-out hidden">
             <Contact />
           </section>
         </div>
