@@ -6,6 +6,11 @@
   color: #fff;
 }
 
-.navbar ul {
-  gap: 2em;
+.navbar li {
+  margin: 0 1em;
+}
+
+.active {
+  transition: color 0.2s;
+  color: red
 }

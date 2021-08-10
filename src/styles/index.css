@@ -51,6 +51,11 @@ table {
 	z-index: 10;
 }
 
+/* enable smooth scrolling when clicking links to access sections */
+html {
+	scroll-behavior: smooth;
+}
+
 /*
 	=========
 	Navigation lists

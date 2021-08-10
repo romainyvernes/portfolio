@@ -42,12 +42,12 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-  transform: scaleY(0.1);
+  transform: scaleY(0.05);
   transform-origin: bottom;
   transition: transform 0.25s;
   background: red;
 }
 
 .project .link a:hover::after {
-  transform: scaleY(1);
+  transform: scaleY(0.99);
 }

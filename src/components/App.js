@@ -28,6 +28,37 @@ import htmlLogo from '../assets/logos/html5_logo.svg';
 /***********/
 
 const App = () => {
+
+  useEffect(() => {
+    // set "visibility" window to 20% height vertically centered
+    const config = {
+      rootMargin: '-40% 0px -40% 0px'
+    };
+    // create observer to watch whether sections are within "visibility" window
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        if (entry.isIntersecting) {
+          document.querySelector(`.primary-header li a[href="#${id}"]`)
+                  .parentElement
+                  .classList
+                  .add('active');
+        } else {
+          document.querySelector(`.primary-header li a[href="#${id}"]`)
+                  .parentElement
+                  .classList
+                  .remove('active');
+        }
+      });
+    }, config);
+    
+    document.querySelectorAll('section[id]').forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+  
   return (
     <div className="home">
       <section className="home-greeting" id="home">
