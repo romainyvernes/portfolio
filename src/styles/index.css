@@ -158,6 +158,13 @@ a {
 	color: inherit;
 }
 
+/* class to highlight links */
+.active {
+  transition: all 0.2s;
+  text-shadow: 2px 1px 3px #fff;
+  font-weight: 600;
+}
+
 /*
 	=========
 	Headings
@@ -207,6 +214,14 @@ p {
 	line-height: 1.4;
 }
 
+.secondary-text-color {
+	color: rgb(229, 255, 0);
+}
+
+.heading-highlight {
+	background: rgba(0, 0, 0, 0.5);
+}
+
 /*
 	=========
 	Animations
@@ -243,4 +258,18 @@ p {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.flash {
+	animation: flash 2s ease infinite;
+}
+
+@keyframes flash {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }

@@ -101,3 +101,9 @@
 .projects .project:last-child {
   margin-bottom: 0;
 }
+
+.back-to-top {
+  font-size: 3em;
+  align-self: flex-end;
+  margin-right: 2em;
+}

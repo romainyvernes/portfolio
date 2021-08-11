@@ -11,11 +11,18 @@ const Greeting = () => {
       <div className="particles-bg background">
         <Particles params={polygonsConfig} />
       </div>
-      <div className="content">
+      <div className="content flex-center">
         <div className="message">
-          <h1 className="left-slide-in">Hello, I'm <span>Romain Yvernes</span>.</h1>
+          <h1 className="left-slide-in">
+            Hello, I'm <span className="heading-highlight">Romain</span>.
+          </h1>
           <h2 className="right-slide-in">I'm a front-end developer.</h2>
         </div>
+        <a href="#about" className="arrow-down">
+          <span className="flash"></span>
+          <span className="flash"></span>
+          <span className="flash"></span>
+        </a>
       </div>
     </section>
   );

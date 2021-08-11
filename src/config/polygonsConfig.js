@@ -1,7 +1,7 @@
 const polygonsConfig = {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 250,
       "density": {
         "enable": true,
         "value_area": 800
@@ -17,7 +17,7 @@ const polygonsConfig = {
         "color": "#000000"
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 6
       },
       "image": {
         "src": "img/github.svg",

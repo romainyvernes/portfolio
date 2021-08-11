@@ -16,7 +16,7 @@ import Particles from 'react-particles-js';
 import snowballsConfig from '../config/snowballsConfig';
 /***********/
 /* fontawesome icons */
-import '../assets/icons/fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /***********/
 /* skill logos */
 import cssLogo from '../assets/logos/css3_logo.svg';
@@ -80,11 +80,13 @@ const App = () => {
           // every other section starting with the first is slid in from the 
           // left
           element.classList.add("left-slide-in");
+          // remove default opacity
           element.classList.remove("hidden");
         } else {
           // every other section starting with the second is slid in from the 
           // right
           element.classList.add("right-slide-in");
+          // remove default opacity
           element.classList.remove("hidden");
         }
       }
@@ -154,6 +156,9 @@ const App = () => {
           <section id="contact" className="narrow space-out hidden">
             <Contact />
           </section>
+          <a href="#about" className="back-to-top">
+            <FontAwesomeIcon icon='arrow-circle-up' />
+          </a>
         </div>
       </main>
       <footer className="primary-footer">

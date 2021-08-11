@@ -11,10 +11,20 @@ const Contact = () => {
           information below and I'll get back to you as soon as I can.
         </p>
       </header>
-      <form>
-        <input type="text" placeholder="Name"></input>
-        <input type="email" placeholder="Email"></input>
-        <textarea row="6" placeholder="Message"></textarea>
+      <form action="mailto:romainyvernes@gmail.com" 
+            method="POST" 
+            name="contact-form"
+            encType="multipart/form-data">
+        <input type="text" 
+               name="name" 
+               placeholder="Name" 
+               size="50" 
+               autoComplete="off" />
+        <input type="email" 
+               name="email" 
+               placeholder="Email" 
+               autoComplete="off" />
+        <textarea row="6" name="message" placeholder="Message"></textarea>
         <button type="submit">Submit</button>
       </form>
     </div>

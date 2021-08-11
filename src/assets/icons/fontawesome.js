@@ -4,7 +4,7 @@ import {
   faGithub,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { far, faUser } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
@@ -13,5 +13,6 @@ library.add(
   faEnvelope,
   faLinkedin,
   far,
-  faUser
+  faUser,
+  faArrowCircleUp
 );
