@@ -1,5 +1,4 @@
 .project {
-  margin: 5em 0;
   display: flex;
 }
 
@@ -7,9 +6,16 @@
   height: 300px;
   flex-basis: 70%;
   background: green;
+  border: 2px solid #fff;
+}
+
+/* hide details layout reserved for mobile display */
+.project .details.mobile {
+  display: none;
 }
 
 .project .details {
+  padding-top: 1.5em;
   flex-basis: 30%;
 }
 
@@ -27,6 +33,7 @@
 .project .link {
   margin: 1em 0;
   letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 .project .link a {
@@ -50,4 +57,36 @@
 
 .project .link a:hover::after {
   transform: scaleY(0.99);
+}
+
+/* mobile display */
+@media screen and (max-width: 767px) {
+  .project,
+  .project .preview,
+  .project .details.mobile {
+    display: block;
+  }
+
+  .project .details.regular {
+    display: none;
+  }
+
+  .project .details.mobile {
+    padding: 0 2em 2em 2em;
+  }
+
+  /* remove bottom margin from description so it doesn't add up to container
+  padding added above */
+  .project .description {
+    margin: 0;
+  }
+
+  .project .links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .project .link {
+    padding: 0 0.5em;
+  }
 }

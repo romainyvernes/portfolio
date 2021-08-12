@@ -16,3 +16,14 @@
   font-size: 0.9em;
   font-weight: 600;
 }
+
+/* mobile display */
+@media screen and (max-width: 767px) {
+  .skill img {
+    height: 70px;
+  }
+
+  .skill {
+    width: 130px;
+  }
+}

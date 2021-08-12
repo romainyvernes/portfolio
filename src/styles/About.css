@@ -5,5 +5,12 @@
 
 .about .description {
   font-weight: 500;
-  margin: 2em 0;
+  margin-top: 2em;
+}
+
+/* mobile display */
+@media screen and (max-width: 767px) {
+  .person-icon {
+    font-size: 150px;
+  }
 }

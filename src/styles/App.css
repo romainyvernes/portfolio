@@ -24,6 +24,7 @@
 /* ensures top of sections appears when accessed through header anchor links */
 .home main section {
   scroll-margin-top: 4.5em;
+  max-width: 100%;
 }
 
 /* used to hide sections by default */
@@ -56,32 +57,32 @@
 }
 
 /* set name for each skill in skills section */
-.home .skills li:first-child {
+.skills li:first-child {
   grid-area: skill1;
 }
 
-.home .skills li:nth-child(2) {
+.skills li:nth-child(2) {
   grid-area: skill2;
 }
 
-.home .skills li:nth-child(3) {
+.skills li:nth-child(3) {
   grid-area: skill3;
 }
 
-.home .skills li:nth-child(4) {
+.skills li:nth-child(4) {
   grid-area: skill4;
 }
 
-.home .skills li:nth-child(5) {
+.skills li:nth-child(5) {
   grid-area: skill5;
 }
 
-.home .skills li:nth-child(6) {
+.skills li:nth-child(6) {
   grid-area: skill6;
 }
 /* */
 
-.home .skills ul {
+.skills ul {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -98,12 +99,82 @@
   align-self: stretch;
 }
 
-.projects .project:last-child {
+/* space out projects */
+.projects li {
+  margin: 5em 0;
+}
+
+/* remove bottom margin from last project to avoid excessive spacing between
+projects section and contact section */
+.projects li:last-child {
   margin-bottom: 0;
 }
+
+/* move details to the left to overlap preview for every other project starting
+with the first */
+.projects li:first-child .details,
+.projects li:nth-child(3) .details {
+  margin-left: -3em;
+}
+
+/* swap details and preview, and move details to the right to overlap preview 
+for every other project starting with the second */
+.projects li:nth-child(2) .details,
+.projects li:nth-child(4) .details {
+  margin-right: -3em;
+  order: -1;
+}
+
+/* move details and preview to the right for every other project starting with 
+the second */
+.projects li:nth-child(2) .project,
+.projects li:nth-child(4) .project {
+  justify-content: flex-end;
+} 
 
 .back-to-top {
   font-size: 3em;
   align-self: flex-end;
   margin-right: 2em;
+}
+
+/* mobile display */
+@media screen and (max-width: 767px) {
+  .home main h2 {
+    font-size: 2.2em;
+  }
+
+  .skills ul {
+    display: flex;
+    overflow: auto;
+    padding: 0 1.5em;
+  }
+
+  .home .projects h2 {
+    margin-bottom: 1em;
+  }
+
+  .projects {
+    margin-bottom: 0;
+  }
+
+  .projects ul {
+    display: flex;
+    overflow: auto;
+    align-items: flex-end;
+  }
+
+  .projects li {
+    margin: 0;
+    min-width: 100%;
+  }
+
+  .projects .project article.details {
+    margin: 0;
+  }
+
+  .back-to-top {
+    align-self: center;
+    margin: 0;
+  }
 }

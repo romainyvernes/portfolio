@@ -58,17 +58,6 @@ html {
 
 /*
 	=========
-	Navigation lists
-	=========
-*/
-
-/* display nagivation list elements horizontally by default */
-ul {
-	display: flex;
-}
-
-/*
-	=========
 	Forms
 	=========
 */
@@ -156,6 +145,7 @@ button:hover {
 a {
 	text-decoration: none;
 	color: inherit;
+	outline: none;
 }
 
 /* class to highlight links */
@@ -264,6 +254,8 @@ p {
 	animation: flash 2s ease infinite;
 }
 
+
+
 @keyframes flash {
 	from {
 		opacity: 0;
@@ -271,5 +263,26 @@ p {
 
 	to {
 		opacity: 1;
+	}
+}
+
+/*
+	=========
+	Responsiveness
+	=========
+*/
+
+/* mobile display */
+@media screen and (max-width: 767px) {
+  .narrow {
+		width: 80%;
+	}
+
+	.space-out {
+		margin: 2em 0;
+	}
+
+	p, h3 {
+		text-align: center;
 	}
 }
