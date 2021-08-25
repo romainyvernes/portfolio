@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useEffect } from 'react';
 /* stylesheet */
 import '../styles/App.css';
@@ -134,26 +135,32 @@ const App = () => {
           </section>
           <section id="projects" className="projects space-out hidden">
             <h2 className="headings-font">Projects</h2>
+            <div className="carousel-menu">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+              <a href="#slide-4"></a>
+            </div>
             <ul>
-              <li>
+              <li id="slide-1">
                 <Project name="Battleship" 
                          description="Play the gameboard classic against the computer."
                          sourceCode="https://github.com/romainyvernes/battleship" 
                          liveApp="https://romainyvernes.github.io/battleship/" />
               </li>
-              <li>
+              <li id="slide-2">
                 <Project name="Shopping Cart" 
                          description="Browse through the catalog of an online blu-ray store and buy your favorite movies and TV shows."
                          sourceCode="https://github.com/romainyvernes/shopping_cart" 
                          liveApp="https://romainyvernes.github.io/shopping_cart/" />
               </li>
-              <li>
+              <li id="slide-3">
                 <Project name="Todo List" 
                          description="Keep track of your busy schedule in one place, from any device."
                          sourceCode="https://github.com/romainyvernes/todo_list" 
                          liveApp="https://romainyvernes.github.io/todo_list/" />
               </li>
-              <li>
+              <li id="slide-4">
                 <Project name="Library" 
                          description="Keep a log of your favorite books in one place and mark them as read to keep track of your past reads."
                          sourceCode="https://github.com/romainyvernes/library" 

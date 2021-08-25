@@ -11,9 +11,7 @@ const Project = (props) => {
         <p className="description">{description}</p>
       </article>
       <a className="preview" href={liveApp} target="_blank" rel="noreferrer">
-        <div className="frame">
-          <div className="media"></div>
-        </div>
+        <div className={`media ${name.toLowerCase().replace(' ', '-')}`}></div>
       </a>
       <article className="details mobile">
         <div className="links">

@@ -50,6 +50,8 @@
 
 .home .content {
   flex-direction: column;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .home p {
@@ -99,6 +101,10 @@
   align-self: stretch;
 }
 
+.carousel-menu {
+  display: none;
+}
+
 /* space out projects */
 .projects li {
   margin: 5em 0;
@@ -114,15 +120,15 @@ projects section and contact section */
 with the first */
 .projects li:first-child .details,
 .projects li:nth-child(3) .details {
-  margin-left: -3em;
+  transform: translateX(-2em);
 }
 
 /* swap details and preview, and move details to the right to overlap preview 
 for every other project starting with the second */
 .projects li:nth-child(2) .details,
 .projects li:nth-child(4) .details {
-  margin-right: -3em;
   order: -1;
+  transform: translateX(2.5em);
 }
 
 /* move details and preview to the right for every other project starting with 
@@ -136,6 +142,11 @@ the second */
   font-size: 3em;
   align-self: flex-end;
   margin-right: 2em;
+  transition: transform 0.25s;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
 }
 
 /* mobile display */
@@ -157,14 +168,38 @@ the second */
   .projects {
     margin-bottom: 0;
   }
-
+  /*
+  .carousel-menu {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0 1em 0;
+  }
+  
+  .carousel-menu a {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 1em;
+    background: rgba(255, 255, 255, 0.9);
+    scroll-snap-type: none;
+  }
+  */
   .projects ul {
     display: flex;
-    overflow: auto;
+    overflow-x: scroll;
     align-items: flex-end;
+    scroll-behavior: smooth;
+    gap: 2em;
+  }
+
+  /* disable horizontal translate on project details */
+  .projects li .project .details {
+    transform: none;
   }
 
   .projects li {
+    text-align: center;
     margin: 0;
     min-width: 100%;
   }
