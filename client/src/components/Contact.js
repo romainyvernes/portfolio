@@ -42,10 +42,8 @@ const Contact = () => {
           information below and I'll get back to you as soon as I can.
         </p>
       </header>
-      <form action="mailto:romainyvernes@gmail.com" 
-            method="POST" 
-            name="contact-form"
-            encType="multipart/form-data">
+      <form action="/contact" 
+            method="POST">
         <input type="text" 
                name="name" 
                placeholder="Name" 
