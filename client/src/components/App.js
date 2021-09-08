@@ -27,8 +27,17 @@ import javascriptLogo from '../assets/logos/javascript_logo.svg';
 import webpackLogo from '../assets/logos/webpack_logo.svg';
 import htmlLogo from '../assets/logos/html5_logo.svg';
 /***********/
+/* axios for http requests */
+import axios from 'axios';
 
 const App = () => {
+  const [data, setData] = React.useState(null);
+
+  useEffect(() => {
+    axios.get('/contact').then((res) => {
+      setData(res.data.body);
+    });
+  }, []);
 
   useEffect(() => {
     // set "visibility" window to 20% height vertically centered
@@ -169,7 +178,7 @@ const App = () => {
             </ul>
           </section>
           <section id="contact" className="narrow space-out hidden">
-            <Contact />
+            <Contact data={data} />
           </section>
           <a href="#about" className="back-to-top">
             <FontAwesomeIcon icon='arrow-circle-up' />

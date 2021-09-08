@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
 
-const Contact = () => {
+const Contact = ({data}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -36,6 +36,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <header>
+        <p>{!data ? 'Loading...' : data}</p>
         <h2 className="headings-font">Contact</h2>
         <p>
           Have a question or want to work together? Leave your contact
