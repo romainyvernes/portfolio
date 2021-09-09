@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
+/* axios for http requests */
+import axios from 'axios';
 
-const Contact = ({data}) => {
+const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   
   const onChange = (event) => {
     const { name, value } = event.target;
-
-    console.log(value)
 
     switch(name) {
       case 'name':
@@ -26,24 +26,36 @@ const Contact = ({data}) => {
     }
   };
 
-  const onSubmitForm = () => {
-    setName('');
-    setEmail('');
-    setMessage('');
-    console.log(message)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios({
+      method: 'POST',
+      url: '/contact',
+      data: {
+        name,
+        email,
+        message
+      }
+    }).then((res) => {
+      if (res.data.msg === 'Success') {
+        alert('Sent');
+        this.reset();
+      } else {
+        alert('Failed to send');
+      }
+    });
   };
   
   return (
     <div className="contact">
       <header>
-        <p>{!data ? 'Loading...' : data}</p>
         <h2 className="headings-font">Contact</h2>
         <p>
           Have a question or want to work together? Leave your contact
           information below and I'll get back to you as soon as I can.
         </p>
       </header>
-      <form action="/contact" 
+      <form onSubmit={handleSubmit} 
             method="POST">
         <input type="text" 
                name="name" 
@@ -67,7 +79,7 @@ const Contact = ({data}) => {
                   onChange={onChange}
                   required>
         </textarea>
-        <button type="submit" onClick={onSubmitForm}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
