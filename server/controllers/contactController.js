@@ -1,4 +1,6 @@
 const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
+const OAuth2 = google.auth.OAuth2;
 
 // transporter setup
 const transport = {
@@ -9,7 +11,9 @@ const transport = {
     type: 'OAuth2',
     user: process.env.USER,
     clientId: process.env.ID,
-    clientSecret: process.env.SECRET
+    clientSecret: process.env.SECRET,
+    refreshToken: process.env.REFRESH,
+    accessToken: process.env.ACCESS
   }
 };
 const transporter = nodemailer.createTransport(transport);
