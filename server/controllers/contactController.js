@@ -3,7 +3,7 @@ const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
 require('dotenv').config();
 
-// email server authentication
+// email server authentication setup
 const OAuthClient = new OAuth2(
   process.env.ID,
   process.env.SECRET,
