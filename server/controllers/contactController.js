@@ -21,12 +21,8 @@ exports.sendEmail = async (req, res, next) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      type: 'OAuth2',
-      user: process.env.USER,
-      clientId: process.env.ID,
-      clientSecret: process.env.SECRET,
-      refreshToken: process.env.REFRESH,
-      accessToken
+      user: 'romainyvernesdev@gmail.com',
+      pass: 'Developer21@'
     }
   });
   transporter.verify((err, success) => {
@@ -38,7 +34,7 @@ exports.sendEmail = async (req, res, next) => {
   });
   
   const email = {
-    from: `${req.body.name} ${req.body.email}`,
+    from: req.body.email,
     to: 'romainyvernes@gmail.com',
     subject: 'New message from portfolio website',
     text: req.body.message
