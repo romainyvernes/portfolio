@@ -39,7 +39,7 @@ const Contact = () => {
     }).then((res) => {
       if (res.data.msg === 'Success') {
         alert('Sent');
-        this.reset();
+        e.target.reset();
       } else {
         alert('Failed to send');
       }
