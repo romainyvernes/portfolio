@@ -14,7 +14,6 @@
 }
 
 .contact button[type="submit"] {
-  width: fit-content;
   margin: 1em 0 0 auto;
   text-transform: uppercase;
   font-size: 1em;
@@ -27,4 +26,12 @@
 .contact button[type="submit"]:hover {
   background: #fff;
   color: #000;
+}
+
+.contact .sent {
+  text-align: center;
+}
+
+.contact .sent button {
+  width: 100%;
 }

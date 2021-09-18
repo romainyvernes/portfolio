@@ -7,6 +7,7 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [showForm, setShowForm] = useState(true);
   
   const onChange = (event) => {
     const { name, value } = event.target;
@@ -26,6 +27,20 @@ const Contact = () => {
     }
   };
 
+  const resetForm = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
+
+  const toggleForm = () => {
+    if (showForm) {
+      setShowForm(false);
+    } else {
+      setShowForm(true);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios({
@@ -38,8 +53,9 @@ const Contact = () => {
       }
     }).then((res) => {
       if (res.data.msg === 'Success') {
-        alert('Sent');
-        e.target.reset();
+        resetForm();
+        // hide form and display "thank you" message
+        toggleForm();
       } else {
         alert('Failed to send');
       }
@@ -50,37 +66,46 @@ const Contact = () => {
     <div className="contact">
       <header>
         <h2 className="headings-font">Contact</h2>
-        <p>
-          Have a question or want to work together? Leave your contact
-          information below and I'll get back to you as soon as I can.
-        </p>
+        {showForm
+          ? <p>
+              Have a question or want to work together? Leave your contact
+              information below and I'll get back to you as soon as I can.
+            </p>
+          : ''
+        }
       </header>
-      <form onSubmit={handleSubmit} 
-            method="POST">
-        <input type="text" 
-               name="name" 
-               placeholder="Name" 
-               size="50" 
-               autoComplete="off"
-               value={name}
-               onChange={onChange}
-               required />
-        <input type="email" 
-               name="email" 
-               placeholder="Email" 
-               autoComplete="off"
-               value={email}
-               onChange={onChange}
-               required />
-        <textarea row="6" 
-                  name="message" 
-                  placeholder="Message"
-                  value={message}
+      {showForm
+        ? <form onSubmit={handleSubmit} 
+                method="POST">
+            <input type="text" 
+                  name="name" 
+                  placeholder="Name" 
+                  size="50" 
+                  autoComplete="off"
+                  value={name}
                   onChange={onChange}
-                  required>
-        </textarea>
-        <button type="submit">Submit</button>
-      </form>
+                  required />
+            <input type="email" 
+                  name="email" 
+                  placeholder="Email" 
+                  autoComplete="off"
+                  value={email}
+                  onChange={onChange}
+                  required />
+            <textarea row="6" 
+                      name="message" 
+                      placeholder="Message"
+                      value={message}
+                      onChange={onChange}
+                      required>
+            </textarea>
+            <button type="submit">Submit</button>
+          </form>
+        : <div className="sent">
+            <p>Your message was sent. Thank you.</p>
+            <button type="submit" onClick={toggleForm}>Go back</button>
+          </div>
+      }
     </div>
   );
 };
