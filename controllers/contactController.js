@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const { google } = require("googleapis");
 require('dotenv').config();
-
+/*
 // gmail api authentication setup
 const OAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
@@ -27,6 +27,17 @@ const transporter = nodemailer.createTransport({
     clientSecret: process.env.CLIENT_SECRET,
     refreshToken: process.env.REFRESH,
     accessToken
+  }
+});
+*/
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.USER_ID,
+    pass: process.env.PASSWORD
   }
 });
 
