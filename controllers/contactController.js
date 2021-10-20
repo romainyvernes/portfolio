@@ -33,8 +33,6 @@ const transporter = nodemailer.createTransport({
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
   auth: {
     user: process.env.USER_ID,
     pass: process.env.PASSWORD
@@ -51,7 +49,7 @@ transporter.verify((err, success) => {
 
 exports.sendEmail = (req, res, next) => {
   const email = {
-    from: `${req.body.name} ${req.body.email}`,
+    from: req.body.email,
     to: 'romainyvernes@gmail.com',
     subject: 'New message from portfolio website',
     text: `Message from ${req.body.name} ${req.body.email}: ${req.body.message}`
