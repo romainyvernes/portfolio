@@ -29,7 +29,6 @@ import htmlLogo from '../assets/logos/html5_logo.svg';
 /***********/
 
 const App = () => {
-
   useEffect(() => {
     // set "visibility" window to 20% height vertically centered
     const config = {
