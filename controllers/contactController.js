@@ -31,25 +31,25 @@ const transporter = nodemailer.createTransport({
 });
 */
 
-exports.sendEmail = (req, res, next) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    port: 8000,
-    secure: false,
-    auth: {
-      user: process.env.USER_ID,
-      pass: process.env.PASSWORD
-    }
-  });
-  
-  transporter.verify((err, success) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log('Server is ready to take messages');
-    }
-  });
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  port: 8000,
+  secure: false,
+  auth: {
+    user: process.env.USER_ID,
+    pass: process.env.PASSWORD
+  }
+});
 
+transporter.verify((err, success) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('Server is ready to take messages');
+  }
+});
+
+exports.sendEmail = (req, res, next) => {
   const email = {
     from: req.body.email,
     to: 'romainyvernes@gmail.com',
