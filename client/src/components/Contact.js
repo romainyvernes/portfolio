@@ -45,7 +45,7 @@ const Contact = () => {
     e.preventDefault();
     axios({
       method: 'POST',
-      url: '/contact',
+      url: 'https://romainyvernes.herokuapp.com/contact',
       data: {
         name,
         email,
