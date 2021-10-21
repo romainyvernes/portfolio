@@ -33,7 +33,7 @@ const transporter = nodemailer.createTransport({
 
 exports.sendEmail = (req, res, next) => {
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'Gmail',
     auth: {
       user: process.env.USER_ID,
       pass: process.env.PASSWORD
@@ -47,7 +47,7 @@ exports.sendEmail = (req, res, next) => {
       console.log('Server is ready to take messages');
     }
   });
-  
+
   const email = {
     from: req.body.email,
     to: 'romainyvernes@gmail.com',
