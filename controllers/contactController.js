@@ -33,7 +33,7 @@ const transporter = nodemailer.createTransport({
 
 exports.sendEmail = (req, res, next) => {
   const transporter = nodemailer.createTransport({
-    host: 'Gmail',
+    service: 'Gmail',
     auth: {
       user: process.env.USER_ID,
       pass: process.env.PASSWORD
