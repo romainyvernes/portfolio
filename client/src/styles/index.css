@@ -220,7 +220,7 @@ p {
 */
 
 .left-slide-in {
-	animation: left-slide-in 1.2s ease-in-out;
+	animation: left-slide-in 0.8s ease-in-out;
 }
 
 @keyframes left-slide-in {
@@ -236,7 +236,7 @@ p {
 }
 
 .right-slide-in {
-	animation: right-slide-in 1.2s ease-in-out;
+	animation: right-slide-in 0.8s ease-in-out;
 }
 
 @keyframes right-slide-in {

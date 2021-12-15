@@ -82,17 +82,51 @@
 .skills li:nth-child(6) {
   grid-area: skill6;
 }
+
+.skills li:nth-child(7) {
+  grid-area: skill7;
+}
+
+.skills li:nth-child(7) {
+  grid-area: skill7;
+}
+
+.skills li:nth-child(8) {
+  grid-area: skill8;
+}
+
+.skills li:nth-child(9) {
+  grid-area: skill9;
+}
+
+.skills li:nth-child(10) {
+  grid-area: skill10;
+}
+.skills li:nth-child(11) {
+  grid-area: skill11;
+}
+.skills li:nth-child(12) {
+  grid-area: skill12;
+}
+
+.skills li:nth-child(13) {
+  grid-area: skill13;
+}
 /* */
 
 .skills ul {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1em;
   grid-template-areas: 
-    ". . skill1 skill1 . ."
-    "skill2 skill2 skill3 skill3 skill4 skill4"
-    ". skill5 skill5 skill6 skill6 .";
+    ". . . skill1 skill1 . . ."
+    "skill2 skill2 skill3 skill3 skill4 skill4 skill5 skill5"
+    "skill6 skill6 skill7 skill7 skill8 skill8 skill9 skill9"
+    "skill10 skill10 skill11 skill11 skill12 skill12 skill13 skill13";
+}
+
+.skill img[alt="EXPRESS"] {
+  filter: invert(100%)
 }
 
 
@@ -120,7 +154,7 @@ projects section and contact section */
 with the first */
 .projects li:first-child .details,
 .projects li:nth-child(3) .details {
-  transform: translateX(-2em);
+  transform: translateX(-1.2em);
 }
 
 /* swap details and preview, and move details to the right to overlap preview 
@@ -128,7 +162,7 @@ for every other project starting with the second */
 .projects li:nth-child(2) .details,
 .projects li:nth-child(4) .details {
   order: -1;
-  transform: translateX(2.5em);
+  transform: translateX(2em);
 }
 
 /* move details and preview to the right for every other project starting with 

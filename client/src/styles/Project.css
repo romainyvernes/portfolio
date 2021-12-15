@@ -38,6 +38,10 @@
   background: rgb(42, 95, 58) center / contain no-repeat;
 }
 
+.media.odinbook {
+  background-image: url('/src/assets/gifs/odinbook.gif');
+}
+
 .media.battleship {
   background-image: url('/src/assets/gifs/battleship.gif');
 }
@@ -48,10 +52,6 @@
 
 .media.todo-list {
   background-image: url('/src/assets/gifs/todo.gif');
-}
-
-.media.library {
-  background-image: url('/src/assets/gifs/library.gif');
 }
 
 /* hide details layout reserved for mobile display */

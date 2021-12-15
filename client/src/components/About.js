@@ -12,12 +12,12 @@ const About = () => {
       <p className="description">
         I'm a career switcher and I couldn't be happier I finally took the 
         leap. Formerly an administrative assistant, I decided to get into 
-        coding after seeing several friends of mine with similar backgrounds 
-        successfully making the transition. I enrolled in Harvard's CS50 
+        coding after seeing several friends of mine with a similar background 
+        to mine successfully making the transition. I enrolled in Harvard's CS50 
         course, completed a few certifications from FreeCodeCamp, and built two 
-        dozen projects through The Odin Project's curriculum. And after 15 
-        months of hard work and self-discipline, I am proud to call myself a 
-        self-taught web developer.
+        dozen projects through The Odin Project's curriculum. And nearly 2 years 
+        of hard work and dedication, I am proud to call myself a sotfware 
+        engineer.
       </p>
     </div>
   );

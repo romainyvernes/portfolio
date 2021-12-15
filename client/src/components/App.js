@@ -26,6 +26,13 @@ import reactLogo from '../assets/logos/react_logo.svg';
 import javascriptLogo from '../assets/logos/javascript_logo.svg';
 import webpackLogo from '../assets/logos/webpack_logo.svg';
 import htmlLogo from '../assets/logos/html5_logo.svg';
+import bootstrapLogo from '../assets/logos/bootstrap_logo.svg';
+import expressLogo from '../assets/logos/express.js_logo.svg';
+import mongodbLogo from '../assets/logos/mongodb_logo.svg';
+import nodeLogo from '../assets/logos/node.js_logo.svg';
+import passportLogo from '../assets/logos/passportjs_logo.svg';
+import reduxLogo from '../assets/logos/redux_logo.svg';
+import socketLogo from '../assets/logos/socket.io_logo.svg';
 /***********/
 
 const App = () => {
@@ -113,6 +120,33 @@ const App = () => {
             <h2 className="headings-font">Skills</h2>
             <ul>
               <li>
+                <Skill image={reactLogo} name="REACT" />
+              </li>
+              <li>
+                <Skill image={expressLogo} name="EXPRESS" />
+              </li>
+              <li>
+                <Skill image={nodeLogo} name="NODE.JS" />
+              </li>
+              <li>
+                <Skill image={reduxLogo} name="REDUX" />
+              </li>
+              <li>
+                <Skill image={mongodbLogo} name="MONDODB" />
+              </li>
+              <li>
+                <Skill image={socketLogo} name="SOCKET.IO" />
+              </li>
+              <li>
+                <Skill image={passportLogo} name="PASSPORT.JS" />
+              </li>
+              <li>
+                <Skill image={bootstrapLogo} name="BOOTSTRAP" />
+              </li>
+              <li>
+                <Skill image={webpackLogo} name="WEBPACK" />
+              </li>
+              <li>
                 <Skill image={javascriptLogo} name="JAVASCRIPT" />
               </li>
               <li>
@@ -120,12 +154,6 @@ const App = () => {
               </li>
               <li>
                 <Skill image={htmlLogo} name="HTML5" />
-              </li>
-              <li>
-                <Skill image={reactLogo} name="REACT" />
-              </li>
-              <li>
-                <Skill image={webpackLogo} name="WEBPACK" />
               </li>
               <li>
                 <Skill image={gitLogo} name="GIT" />
@@ -142,28 +170,28 @@ const App = () => {
             </div>
             <ul>
               <li id="slide-1">
+                <Project name="Odinbook" 
+                         description="Full-stack social media app that showcases the use of MongoDB, Express.js, React, and Node.js"
+                         sourceCode="https://github.com/romainyvernes/odinbook_backend" 
+                         liveApp="https://odinbook-social.herokuapp.com/" />
+              </li>
+              <li id="slide-2">
                 <Project name="Battleship" 
-                         description="Play the gameboard classic against the computer."
+                         description="React-based render of the gameboard classic that demonstrates the use of factory functions and IIFEs with a simple AI as the opponent"
                          sourceCode="https://github.com/romainyvernes/battleship" 
                          liveApp="https://romainyvernes.github.io/battleship/" />
               </li>
-              <li id="slide-2">
+              <li id="slide-3">
                 <Project name="Shopping Cart" 
-                         description="Browse through the catalog of an online blu-ray store and buy your favorite movies and TV shows."
+                         description="React-based app that emphasizes the use of reusable components in UI conceptualization and uses React Router DOM for multi-page navigation"
                          sourceCode="https://github.com/romainyvernes/shopping_cart" 
                          liveApp="https://romainyvernes.github.io/shopping_cart/" />
               </li>
-              <li id="slide-3">
+              <li id="slide-4">
                 <Project name="Todo List" 
-                         description="Keep track of your busy schedule in one place, from any device."
+                         description="Full-stack app with Firebase back-end that demonstrates the use of Webpack to create a minified production build"
                          sourceCode="https://github.com/romainyvernes/todo_list" 
                          liveApp="https://romainyvernes.github.io/todo_list/" />
-              </li>
-              <li id="slide-4">
-                <Project name="Library" 
-                         description="Keep a log of your favorite books in one place and mark them as read to keep track of your past reads."
-                         sourceCode="https://github.com/romainyvernes/library" 
-                         liveApp="https://romainyvernes.github.io/library/" />
               </li>
             </ul>
           </section>
