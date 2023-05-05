@@ -173,7 +173,7 @@ const App = () => {
                 <Project name="Odinbook" 
                          description="Full-stack social media app that showcases the use of MongoDB, Express.js, React, and Node.js"
                          sourceCode="https://github.com/romainyvernes/odinbook_backend" 
-                         liveApp="https://odinbook-social.herokuapp.com/" />
+                         liveApp="https://odinbook-boqn.onrender.com/" />
               </li>
               <li id="slide-2">
                 <Project name="Battleship" 
