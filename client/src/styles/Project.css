@@ -75,6 +75,12 @@
   font-size: 1.1em;
 }
 
+.project .sub-description {
+  margin-top: 1em;
+  font-size: 0.7em;
+  display: block;
+}
+
 .project .link {
   margin: 1em 0;
   letter-spacing: 2px;

@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Project.css';
 
 const Project = (props) => {
-  const { name, description, sourceCode, liveApp } = props;
+  const { name, description, sourceCode, liveApp, subDescription = "" } = props;
 
   return (
     <div className="project">
@@ -25,7 +25,10 @@ const Project = (props) => {
       </article>
       <article className="details regular">
         <h3 className="subheadings-font">{name}</h3>
-        <p className="description">{description}</p>
+        <p className="description">
+          {description}
+          {subDescription && <span className="sub-description">{subDescription}</span>}
+        </p>
         <p className="link">
           <a href={sourceCode} target="_blank" rel="noreferrer">SOURCE CODE</a>
         </p>
