@@ -174,7 +174,7 @@ const App = () => {
                          description="Full-stack social media app that showcases the use of MongoDB, Express.js, React, and Node.js"
                          subDescription="Note: initial load may be slow due to limitations in server's free tier subscription"
                          sourceCode="https://github.com/romainyvernes/odinbook_backend" 
-                         liveApp="https://odinbook-boqn.onrender.com/" />
+                         liveApp="https://web-production-51ca.up.railway.app/" />
               </li>
               <li id="slide-2">
                 <Project name="Battleship" 
