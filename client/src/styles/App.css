@@ -59,7 +59,7 @@
 }
 
 /* set name for each skill in skills section */
-.skills li:first-child {
+/* .skills li:first-child {
   grid-area: skill1;
 }
 
@@ -111,18 +111,32 @@
 
 .skills li:nth-child(13) {
   grid-area: skill13;
-}
+} */
 /* */
 
 .skills ul {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 1em;
-  grid-template-areas: 
+  /* grid-template-areas: 
     ". . . skill1 skill1 . . ."
     "skill2 skill2 skill3 skill3 skill4 skill4 skill5 skill5"
     "skill6 skill6 skill7 skill7 skill8 skill8 skill9 skill9"
-    "skill10 skill10 skill11 skill11 skill12 skill12 skill13 skill13";
+    "skill10 skill10 skill11 skill11 skill12 skill12 skill13 skill13"; */
+}
+
+.skills li {
+  grid-column: span 2;
+}
+
+.skills li:last-child {
+  grid-column: 6 / span 2;
+}
+.skills li:nth-last-child(2) {
+  grid-column: 4 / span 2;
+}
+.skills li:nth-last-child(3) {
+  grid-column: 2 / span 2;
 }
 
 .skill img[alt="EXPRESS"] {

@@ -33,6 +33,8 @@ import nodeLogo from '../assets/logos/node.js_logo.svg';
 import passportLogo from '../assets/logos/passportjs_logo.svg';
 import reduxLogo from '../assets/logos/redux_logo.svg';
 import socketLogo from '../assets/logos/socket.io_logo.svg';
+import typecriptLogo from '../assets/logos/typescript_logo.svg';
+import sassLogo from '../assets/logos/sass_logo.svg';
 /***********/
 
 const App = () => {
@@ -121,6 +123,12 @@ const App = () => {
             <ul>
               <li>
                 <Skill image={reactLogo} name="REACT" />
+              </li>
+              <li>
+                <Skill image={typecriptLogo} name="TYPESCRIPT" />
+              </li>
+              <li>
+                <Skill image={sassLogo} name="SASS" />
               </li>
               <li>
                 <Skill image={expressLogo} name="EXPRESS" />
