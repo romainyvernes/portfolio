@@ -7,15 +7,15 @@ const Footer = () => {
     <div className="footer flex-center">
       <ul className="social">
         <li>
-          <a href="https://github.com/romainyvernes" 
-             target='_blank' 
+          <a href="https://github.com/romainyvernes"
+             target='_blank'
              rel='noreferrer'>
             <FontAwesomeIcon icon={['fab', 'github']} />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/romainyvernes" 
-             target='_blank' 
+          <a href="https://www.linkedin.com/in/romainyvernes"
+             target='_blank'
              rel='noreferrer'>
             <FontAwesomeIcon icon={['fab', 'linkedin']} />
           </a>
@@ -26,7 +26,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p className="copyright">Romain Yvernes &copy; 2021</p>
+      <p className="copyright">Romain Yvernes &copy; 2023</p>
     </div>
   );
 };
