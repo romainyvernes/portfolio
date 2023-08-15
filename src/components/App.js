@@ -13,7 +13,7 @@ import Footer from './Footer';
 import Skill from './Skill';
 /***********/
 /* animated background */
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import snowballsConfig from '../config/snowballsConfig';
 /***********/
 /* fontawesome icons */
@@ -48,7 +48,7 @@ const App = () => {
       entries.forEach((entry) => {
         const id = entry.target.id;
         if (entry.isIntersecting) { // section is visible
-          // add class "active" to highlight corresponding header link of 
+          // add class "active" to highlight corresponding header link of
           // visible section
           document.querySelector(`.primary-header li a[href="#${id}"]`)
                   .parentElement
@@ -82,17 +82,17 @@ const App = () => {
 
     // get all sections with ids from the document
     const sections = document.querySelectorAll('main section[id]');
-    
+
     for (let i = 0; i < sections.length; i++) {
       if (sections[i].id === element.id) { // look for matching element
-        if (i % 2 === 0) { 
-          // every other section starting with the first is slid in from the 
+        if (i % 2 === 0) {
+          // every other section starting with the first is slid in from the
           // left
           element.classList.add("left-slide-in");
           // remove default opacity
           element.classList.remove("hidden");
         } else {
-          // every other section starting with the second is slid in from the 
+          // every other section starting with the second is slid in from the
           // right
           element.classList.add("right-slide-in");
           // remove default opacity
@@ -101,7 +101,7 @@ const App = () => {
       }
     }
   };
-  
+
   return (
     <div className="home">
       <section className="home-greeting" id="home">
@@ -178,28 +178,28 @@ const App = () => {
             </div>
             <ul>
               <li id="slide-1">
-                <Project name="Odinbook" 
+                <Project name="Odinbook"
                          description="Full-stack social media app that showcases the use of MongoDB, Express.js, React, and Node.js"
                          subDescription="Note: initial load may be slow due to limitations in server's free tier subscription"
-                         sourceCode="https://github.com/romainyvernes/odinbook_backend" 
+                         sourceCode="https://github.com/romainyvernes/odinbook_backend"
                          liveApp="https://wispy-night-906.fly.dev/" />
               </li>
               <li id="slide-2">
-                <Project name="Battleship" 
+                <Project name="Battleship"
                          description="React-based render of the gameboard classic that demonstrates the use of factory functions and IIFEs with a simple AI as the opponent"
-                         sourceCode="https://github.com/romainyvernes/battleship" 
+                         sourceCode="https://github.com/romainyvernes/battleship"
                          liveApp="https://romainyvernes.github.io/battleship/" />
               </li>
               <li id="slide-3">
-                <Project name="Shopping Cart" 
+                <Project name="Shopping Cart"
                          description="React-based app that emphasizes the use of reusable components in UI conceptualization and uses React Router DOM for multi-page navigation"
-                         sourceCode="https://github.com/romainyvernes/shopping_cart" 
+                         sourceCode="https://github.com/romainyvernes/shopping_cart"
                          liveApp="https://romainyvernes.github.io/shopping_cart/" />
               </li>
               <li id="slide-4">
-                <Project name="Todo List" 
+                <Project name="Todo List"
                          description="Full-stack app with Firebase back-end that demonstrates the use of Webpack to create a minified production build"
-                         sourceCode="https://github.com/romainyvernes/todo_list" 
+                         sourceCode="https://github.com/romainyvernes/todo_list"
                          liveApp="https://romainyvernes.github.io/todo_list/" />
               </li>
             </ul>

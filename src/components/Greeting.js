@@ -1,6 +1,6 @@
 import React from 'react';
 /* component for animated background */
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 /* configuration options for animated background */
 import polygonsConfig from '../config/polygonsConfig';
 import '../styles/Greeting.css';
