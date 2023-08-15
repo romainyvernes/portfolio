@@ -8,7 +8,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [showForm, setShowForm] = useState(true);
-  
+
   const onChange = (event) => {
     const { name, value } = event.target;
 
@@ -45,7 +45,7 @@ const Contact = () => {
     e.preventDefault();
     axios({
       method: 'POST',
-      url: 'https://romainyvernes.herokuapp.com/contact',
+      url: `${process.env.SITE_URL}/contact`,
       data: {
         name,
         email,
@@ -61,7 +61,7 @@ const Contact = () => {
       }
     });
   };
-  
+
   return (
     <div className="contact">
       <header>
@@ -75,25 +75,25 @@ const Contact = () => {
         }
       </header>
       {showForm
-        ? <form onSubmit={handleSubmit} 
+        ? <form onSubmit={handleSubmit}
                 method="POST">
-            <input type="text" 
-                  name="name" 
-                  placeholder="Name" 
-                  size="50" 
+            <input type="text"
+                  name="name"
+                  placeholder="Name"
+                  size="50"
                   autoComplete="off"
                   value={name}
                   onChange={onChange}
                   required />
-            <input type="email" 
-                  name="email" 
-                  placeholder="Email" 
+            <input type="email"
+                  name="email"
+                  placeholder="Email"
                   autoComplete="off"
                   value={email}
                   onChange={onChange}
                   required />
-            <textarea row="6" 
-                      name="message" 
+            <textarea row="6"
+                      name="message"
                       placeholder="Message"
                       value={message}
                       onChange={onChange}
