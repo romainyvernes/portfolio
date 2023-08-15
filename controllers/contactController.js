@@ -14,7 +14,7 @@ OAuth2Client.setCredentials({
 
 // get current access token
 const accessToken = OAuth2Client.getAccessToken();
-  
+
 // transporter setup
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -52,7 +52,7 @@ transporter.verify((err, success) => {
 exports.sendEmail = (req, res, next) => {
   const email = {
     from: req.body.email,
-    to: 'romainyvernes@gmail.com',
+    to: process.env.DESTINATION_EMAIL,
     subject: 'New message from portfolio website',
     text: `Message from ${req.body.name} ${req.body.email}: ${req.body.message}`
   };
