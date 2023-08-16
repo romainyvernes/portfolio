@@ -16,7 +16,7 @@ const Greeting = () => {
           <h1 className="left-slide-in">
             Hello, I'm <span className="heading-highlight">Romain</span>.
           </h1>
-          <h2 className="right-slide-in">I'm a full-stack developer.</h2>
+          <h2 className="right-slide-in">I'm a software engineer</h2>
         </div>
         <a href="#about" className="arrow-down">
           <span className="flash"></span>
