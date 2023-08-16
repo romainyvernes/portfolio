@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 /* component for animated background */
-import Particles from 'react-tsparticles';
+import Particles from 'react-particles';
+import { loadFull } from 'tsparticles';
 /* configuration options for animated background */
 import polygonsConfig from '../config/polygonsConfig';
 import '../styles/Greeting.css';
 
 const Greeting = () => {
+  const particlesInit = useCallback(async engine => {
+    console.log(engine, "polygons")
+    await loadFull(engine);
+  }, []);
+
   return (
     <section className="greeting flex-center">
       <div className="particles-bg background">
-        <Particles params={polygonsConfig} />
+        {/* <Particles options={polygonsConfig} init={particlesInit} /> */}
       </div>
       <div className="content flex-center">
         <div className="message">

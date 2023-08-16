@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 /* stylesheet */
 import '../styles/App.css';
 /***********/
@@ -13,7 +13,8 @@ import Footer from './Footer';
 import Skill from './Skill';
 /***********/
 /* animated background */
-import Particles from 'react-tsparticles';
+import Particles from 'react-particles';
+import { loadFull } from 'tsparticles';
 import snowballsConfig from '../config/snowballsConfig';
 /***********/
 /* fontawesome icons */
@@ -71,6 +72,10 @@ const App = () => {
     return () => observer.disconnect();
   }, []);
 
+  const particlesInit = useCallback(async engine => {
+    await loadFull(engine);
+  }, []);
+
   const handleSlideInOnScroll = (element) => {
     // terminate function if slide-in effect was already added once
     if (
@@ -112,7 +117,7 @@ const App = () => {
       </header>
       <main>
         <div className="particles-bg background">
-          <Particles params={snowballsConfig} />
+          <Particles init={particlesInit} options={snowballsConfig} />
         </div>
         <div className="content flex-center">
           <section id="about" className="narrow space-out hidden">
