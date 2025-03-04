@@ -62,6 +62,7 @@
 .project .details {
   flex-basis: 30%;
   padding-top: 1.5em;
+  z-index: 100;
 }
 
 .project h3 {
