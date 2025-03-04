@@ -19,7 +19,7 @@ import snowballsConfig from '../config/snowballsConfig';
 /* fontawesome icons */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /***********/
-import { SKILLS } from '../utils/constants';
+import { SKILLS, PROJECTS } from '../utils/constants';
 
 const App = () => {
   useEffect(() => {
@@ -119,37 +119,18 @@ const App = () => {
           <section id="projects" className="projects space-out hidden">
             <h2 className="headings-font">Projects</h2>
             <div className="carousel-menu">
-              <a href="#slide-1"></a>
-              <a href="#slide-2"></a>
-              <a href="#slide-3"></a>
-              <a href="#slide-4"></a>
+              {PROJECTS.map((project, index) => <a href={`#slide-${index + 1}`}></a>)}
             </div>
             <ul>
-              <li id="slide-1">
-                <Project name="Odinbook"
-                         description="Full-stack social media app that showcases the use of MongoDB, Express.js, React, and Node.js"
-                         subDescription="Note: initial load may be slow due to limitations in server's free tier subscription"
-                         sourceCode="https://github.com/romainyvernes/odinbook_backend"
-                         liveApp="https://wispy-night-906.fly.dev/" />
-              </li>
-              <li id="slide-2">
-                <Project name="Battleship"
-                         description="React-based render of the gameboard classic that demonstrates the use of factory functions and IIFEs with a simple AI as the opponent"
-                         sourceCode="https://github.com/romainyvernes/battleship"
-                         liveApp="https://romainyvernes.github.io/battleship/" />
-              </li>
-              <li id="slide-3">
-                <Project name="Shopping Cart"
-                         description="React-based app that emphasizes the use of reusable components in UI conceptualization and uses React Router DOM for multi-page navigation"
-                         sourceCode="https://github.com/romainyvernes/shopping_cart"
-                         liveApp="https://romainyvernes.github.io/shopping_cart/" />
-              </li>
-              <li id="slide-4">
-                <Project name="Todo List"
-                         description="Full-stack app with Firebase back-end that demonstrates the use of Webpack to create a minified production build"
-                         sourceCode="https://github.com/romainyvernes/todo_list"
-                         liveApp="https://romainyvernes.github.io/todo_list/" />
-              </li>
+              {PROJECTS.map(({name, description, subDescription, sourceCode, liveApp}, index) => (
+                <li id={`slide-${index + 1}`}>
+                  <Project name={name}
+                           description={description}
+                           subDescription={subDescription}
+                           sourceCode={sourceCode}
+                           liveApp={liveApp} />
+                </li>
+              ))}
             </ul>
           </section>
           <section id="contact" className="narrow space-out hidden">

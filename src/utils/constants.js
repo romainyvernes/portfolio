@@ -33,3 +33,31 @@ export const SKILLS = {
   "HTML5": htmlLogo,
   "GIT": gitLogo,
 };
+
+export const PROJECTS = [
+  {
+    name: "Odinbook",
+    description: "Full-stack social media app that showcases the use of MongoDB, Express.js, React, and Node.js",
+    subDescription: "Note: initial load may be slow due to limitations in server's free tier subscription",
+    sourceCode: "https://github.com/romainyvernes/odinbook_backend",
+    liveApp: "https://wispy-night-906.fly.dev/"
+  },
+  {
+    name: "Battleship",
+    description: "React-based render of the gameboard classic that demonstrates the use of factory functions and IIFEs with a simple AI as the opponent",
+    sourceCode: "https://github.com/romainyvernes/battleship",
+    liveApp: "https://romainyvernes.github.io/battleship/"
+  },
+  {
+    name: "Shopping Cart",
+    description: "React-based app that emphasizes the use of reusable components in UI conceptualization and uses React Router DOM for multi-page navigation",
+    sourceCode: "https://github.com/romainyvernes/shopping_cart",
+    liveApp: "https://romainyvernes.github.io/shopping_cart/"
+  },
+  {
+    name: "Todo List",
+    description: "Full-stack app with Firebase back-end that demonstrates the use of Webpack to create a minified production build",
+    sourceCode: "https://github.com/romainyvernes/todo_list",
+    liveApp: "https://romainyvernes.github.io/todo_list/"
+  },
+];
