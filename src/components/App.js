@@ -106,7 +106,7 @@ const App = () => {
           <section id="about" className="narrow space-out hidden">
             <About />
           </section>
-          <section id="skills" className="skills space-out hidden">
+          {/* <section id="skills" className="skills space-out hidden">
             <h2 className="headings-font">Skills</h2>
             <ul>
               {
@@ -115,7 +115,7 @@ const App = () => {
                 ))
               }
             </ul>
-          </section>
+          </section> */}
           <section id="projects" className="projects space-out hidden">
             <h2 className="headings-font">Projects</h2>
             <div className="carousel-menu">
