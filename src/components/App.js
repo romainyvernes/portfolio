@@ -19,23 +19,7 @@ import snowballsConfig from '../config/snowballsConfig';
 /* fontawesome icons */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /***********/
-/* skill logos */
-import cssLogo from '../assets/logos/css3_logo.svg';
-import gitLogo from '../assets/logos/git_logo.svg';
-import reactLogo from '../assets/logos/react_logo.svg';
-import javascriptLogo from '../assets/logos/javascript_logo.svg';
-import webpackLogo from '../assets/logos/webpack_logo.svg';
-import htmlLogo from '../assets/logos/html5_logo.svg';
-import bootstrapLogo from '../assets/logos/bootstrap_logo.svg';
-import expressLogo from '../assets/logos/express.js_logo.svg';
-import mongodbLogo from '../assets/logos/mongodb_logo.svg';
-import nodeLogo from '../assets/logos/node.js_logo.svg';
-import passportLogo from '../assets/logos/passportjs_logo.svg';
-import reduxLogo from '../assets/logos/redux_logo.svg';
-import socketLogo from '../assets/logos/socket.io_logo.svg';
-import typecriptLogo from '../assets/logos/typescript_logo.svg';
-import sassLogo from '../assets/logos/sass_logo.svg';
-/***********/
+import { SKILLS } from '../utils/constants';
 
 const App = () => {
   useEffect(() => {
@@ -125,51 +109,11 @@ const App = () => {
           <section id="skills" className="skills space-out hidden">
             <h2 className="headings-font">Skills</h2>
             <ul>
-              <li>
-                <Skill image={reactLogo} name="REACT" />
-              </li>
-              <li>
-                <Skill image={typecriptLogo} name="TYPESCRIPT" />
-              </li>
-              <li>
-                <Skill image={sassLogo} name="SASS" />
-              </li>
-              <li>
-                <Skill image={expressLogo} name="EXPRESS" />
-              </li>
-              <li>
-                <Skill image={nodeLogo} name="NODE.JS" />
-              </li>
-              <li>
-                <Skill image={reduxLogo} name="REDUX" />
-              </li>
-              <li>
-                <Skill image={mongodbLogo} name="MONDODB" />
-              </li>
-              <li>
-                <Skill image={socketLogo} name="SOCKET.IO" />
-              </li>
-              <li>
-                <Skill image={passportLogo} name="PASSPORT.JS" />
-              </li>
-              <li>
-                <Skill image={bootstrapLogo} name="BOOTSTRAP" />
-              </li>
-              <li>
-                <Skill image={webpackLogo} name="WEBPACK" />
-              </li>
-              <li>
-                <Skill image={javascriptLogo} name="JAVASCRIPT" />
-              </li>
-              <li>
-                <Skill image={cssLogo} name="CSS3" />
-              </li>
-              <li>
-                <Skill image={htmlLogo} name="HTML5" />
-              </li>
-              <li>
-                <Skill image={gitLogo} name="GIT" />
-              </li>
+              {
+                Object.entries(SKILLS).map(([name, logo]) => (
+                  <li><Skill image={logo} name={name} /></li>
+                ))
+              }
             </ul>
           </section>
           <section id="projects" className="projects space-out hidden">
